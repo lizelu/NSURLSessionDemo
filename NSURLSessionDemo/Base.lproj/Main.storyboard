@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QL2-kG-3P7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NSURLSession-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NSURLSessionDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpl-5r-c0h">
+                                <rect key="frame" x="16" y="157" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="F5M-Om-3eb">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="110"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="XBa-vz-3sF"/>
+                                </constraints>
+                                <state key="normal" title="DataTask_Post"/>
+                                <connections>
+                                    <action selector="tapSessionPostButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8wE-3P-cpw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFK-j7-yQQ">
+                                <rect key="frame" x="21" y="118" width="81" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="god-4D-cr0"/>
+                                    <constraint firstAttribute="width" constant="181" id="sxe-X1-doc">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="81"/>
+                                    </constraint>
+                                </constraints>
+                                <state key="normal" title="UploadTask"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="god-4D-cr0"/>
+                                        <exclude reference="sxe-X1-doc"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="god-4D-cr0"/>
+                                        <include reference="sxe-X1-doc"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapSessionUploadFileButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgu-gg-Xtv"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test.png" translatesAutoresizingMaskIntoConstraints="NO" id="o0M-Dj-3HP">
+                                <rect key="frame" x="11" y="194" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Imm-q6-LNc"/>
+                                    <constraint firstAttribute="width" constant="100" id="nxk-xO-O5y"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Imm-q6-LNc"/>
+                                        <exclude reference="nxk-xO-O5y"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Imm-q6-LNc"/>
+                                        <include reference="nxk-xO-O5y"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1e-tp-QfD">
+                                <rect key="frame" x="11" y="302" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6Yy-ME-YCa"/>
+                                    <constraint firstAttribute="width" constant="100" id="Q84-aj-Yxn">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="60"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="开始下载"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Yy-ME-YCa"/>
+                                        <exclude reference="Q84-aj-Yxn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="6Yy-ME-YCa"/>
+                                        <include reference="Q84-aj-Yxn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapDownloadTaskButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qcr-IK-TFv"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xZM-XR-iMf">
+                                <rect key="frame" x="16" y="340" width="150" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="5w1-iw-jVv"/>
+                                    <constraint firstAttribute="height" constant="10" id="PZE-UE-ghI"/>
+                                </constraints>
+                                <color key="progressTintColor" red="0.87045609951019287" green="0.0" blue="0.026384448632597923" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="trackTintColor" red="0.098039215690000001" green="0.7725490196" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5w1-iw-jVv"/>
+                                        <exclude reference="PZE-UE-ghI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="5w1-iw-jVv"/>
+                                        <include reference="PZE-UE-ghI"/>
+                                    </mask>
+                                </variation>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzD-j6-CTG">
+                                <rect key="frame" x="96" y="302" width="54" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Y4V-cu-iV5"/>
+                                    <constraint firstAttribute="width" constant="54" id="vWA-pA-IDW"/>
+                                </constraints>
+                                <state key="normal" title="暂停"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Y4V-cu-iV5"/>
+                                        <exclude reference="vWA-pA-IDW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Y4V-cu-iV5"/>
+                                        <include reference="vWA-pA-IDW"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qzA-iL-CRO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rjw-a7-w7i">
+                                <rect key="frame" x="238" y="80" width="121" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JuM-NK-Aue"/>
+                                    <constraint firstAttribute="width" constant="121" id="OvU-BP-4hy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Request 设置缓存"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JuM-NK-Aue"/>
+                                        <exclude reference="OvU-BP-4hy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JuM-NK-Aue"/>
+                                        <include reference="OvU-BP-4hy"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapRequestCacheButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rf-ba-7TR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NS0-Gr-6S6">
+                                <rect key="frame" x="201" y="118" width="158" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="qzS-ez-S86"/>
+                                    <constraint firstAttribute="height" constant="30" id="w0r-T9-3Ep"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Configuration 设置缓存"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qzS-ez-S86"/>
+                                        <exclude reference="w0r-T9-3Ep"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="qzS-ez-S86"/>
+                                        <include reference="w0r-T9-3Ep"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapConfigurationCacheButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bBF-qp-MSH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWd-qi-cil">
+                                <rect key="frame" x="193" y="157" width="166" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="JAU-vp-fes"/>
+                                    <constraint firstAttribute="height" constant="30" id="S66-kV-T06"/>
+                                </constraints>
+                                <state key="normal" title="Request + NSURLCache"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JAU-vp-fes"/>
+                                        <exclude reference="S66-kV-T06"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JAU-vp-fes"/>
+                                        <include reference="S66-kV-T06"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapRequestURLCacheButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GOG-kX-WbF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vun-UR-wQV">
+                                <rect key="frame" x="156" y="194" width="203" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xfk-dZ-ekV"/>
+                                    <constraint firstAttribute="width" constant="203" id="fb9-aS-4Dg"/>
+                                </constraints>
+                                <state key="normal" title="Configuration + NSURLCache"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Xfk-dZ-ekV"/>
+                                        <exclude reference="fb9-aS-4Dg"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Xfk-dZ-ekV"/>
+                                        <include reference="fb9-aS-4Dg"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapConfigNSURLCacheButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8nC-km-uAZ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="log" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xO9-q8-tpo">
+                                <rect key="frame" x="11" y="369" width="348" height="278"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RlS-8Q-3aK">
+                                <rect key="frame" x="115" y="80" width="118" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yE1-Nv-LSD"/>
+                                </constraints>
+                                <state key="normal" title="URL编码"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="yE1-Nv-LSD"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="yE1-Nv-LSD"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapURLEncodeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0e-EQ-n9z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhq-Io-XNG">
+                                <rect key="frame" x="142" y="238" width="217" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="UK0-7x-ehm"/>
+                                    <constraint firstAttribute="height" constant="30" id="UKc-KX-5Hm"/>
+                                </constraints>
+                                <state key="normal" title="NSURLAuthenticationChallenge"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="UK0-7x-ehm"/>
+                                        <exclude reference="UKc-KX-5Hm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="UK0-7x-ehm"/>
+                                        <include reference="UKc-KX-5Hm"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapAuthenticationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QoU-fP-M1E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kqm-pN-rgn">
+                                <rect key="frame" x="244" y="276" width="115" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sf7-NL-8Z7"/>
+                                    <constraint firstAttribute="width" constant="115" id="uZq-6o-LKq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SessionDelegate">
+                                            <attributes>
+                                                <color key="NSColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="13" name="AmericanTypewriter"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sf7-NL-8Z7"/>
+                                        <exclude reference="uZq-6o-LKq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="sf7-NL-8Z7"/>
+                                        <include reference="uZq-6o-LKq"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapSessionDelegateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P3Q-93-F1s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00N-1Q-hoY">
+                                <rect key="frame" x="195" y="315" width="161" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8DN-CY-kyV"/>
+                                    <constraint firstAttribute="width" constant="161" id="TIb-um-GDY"/>
+                                </constraints>
+                                <state key="normal" title="SCNetworkReachability"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8DN-CY-kyV"/>
+                                        <exclude reference="TIb-um-GDY"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8DN-CY-kyV"/>
+                                        <include reference="TIb-um-GDY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapSCNetworkReachabilityButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kl4-al-plL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eN7-FJ-T3v">
+                                <rect key="frame" x="11" y="194" width="100" height="95"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zaf-ji-fCy"/>
+                                    <constraint firstAttribute="height" constant="95" id="hK8-y1-fmK"/>
+                                </constraints>
+                                <state key="normal" title="Cache">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Zaf-ji-fCy"/>
+                                        <exclude reference="hK8-y1-fmK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Zaf-ji-fCy"/>
+                                        <include reference="hK8-y1-fmK"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="tapCacheTestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwV-u1-nKX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4d-XL-63F">
+                                <rect key="frame" x="16" y="80" width="102" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="DoF-o4-YTf">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="102"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="30" id="VNF-yO-rXi"/>
+                                </constraints>
+                                <state key="normal" title="DataTask_get"/>
+                                <connections>
+                                    <action selector="tapSessionGetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2sU-Q8-vTA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="rjw-a7-w7i" secondAttribute="trailing" id="0Lb-X5-4df"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xO9-q8-tpo" secondAttribute="bottom" constant="20" id="0mj-YO-Lh1"/>
+                            <constraint firstItem="RlS-8Q-3aK" firstAttribute="leading" secondItem="y4d-XL-63F" secondAttribute="trailing" constant="-3" id="1WT-C8-h2g"/>
+                            <constraint firstItem="RlS-8Q-3aK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="3Os-3D-rif"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="00N-1Q-hoY" secondAttribute="trailing" constant="3" id="74b-EH-ds5"/>
+                            <constraint firstItem="o0M-Dj-3HP" firstAttribute="top" secondItem="oFK-j7-yQQ" secondAttribute="bottom" constant="46" id="9US-nW-ZKp"/>
+                            <constraint firstItem="oFK-j7-yQQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CDY-Di-uMG">
+                                <variation key="heightClass=regular-widthClass=compact" constant="5"/>
+                            </constraint>
+                            <constraint firstItem="eN7-FJ-T3v" firstAttribute="top" secondItem="oFK-j7-yQQ" secondAttribute="bottom" constant="46" id="Evl-1a-kLt"/>
+                            <constraint firstItem="fhq-Io-XNG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FcL-N2-uCc"/>
+                            <constraint firstItem="xO9-q8-tpo" firstAttribute="top" secondItem="xZM-XR-iMf" secondAttribute="bottom" constant="19" id="KIX-qB-H38"/>
+                            <constraint firstItem="xO9-q8-tpo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="KKE-Su-2ar"/>
+                            <constraint firstItem="fhq-Io-XNG" firstAttribute="top" secondItem="vun-UR-wQV" secondAttribute="bottom" constant="14" id="KYF-JS-R7E"/>
+                            <constraint firstItem="kqm-pN-rgn" firstAttribute="top" secondItem="fhq-Io-XNG" secondAttribute="bottom" constant="8" id="Of0-uT-PjG"/>
+                            <constraint firstItem="vun-UR-wQV" firstAttribute="top" secondItem="mWd-qi-cil" secondAttribute="bottom" constant="7" id="SMk-Gh-iTp"/>
+                            <constraint firstItem="xO9-q8-tpo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="SdM-rT-SEv"/>
+                            <constraint firstItem="kqm-pN-rgn" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="URp-tV-Adi"/>
+                            <constraint firstItem="y4d-XL-63F" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="Ud0-SR-9cN"/>
+                            <constraint firstItem="dpl-5r-c0h" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Vxn-v1-3i9"/>
+                            <constraint firstItem="eN7-FJ-T3v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="Wo5-6o-0b7"/>
+                            <constraint firstItem="vun-UR-wQV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Ys8-58-mqf"/>
+                            <constraint firstItem="00N-1Q-hoY" firstAttribute="top" secondItem="kqm-pN-rgn" secondAttribute="bottom" constant="9" id="Yxu-q6-FAW"/>
+                            <constraint firstItem="o0M-Dj-3HP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-5" id="bFo-c3-ksX"/>
+                            <constraint firstItem="xZM-XR-iMf" firstAttribute="top" secondItem="O1e-tp-QfD" secondAttribute="bottom" constant="8" id="dBu-Fj-TWJ"/>
+                            <constraint firstItem="mWd-qi-cil" firstAttribute="top" secondItem="NS0-Gr-6S6" secondAttribute="bottom" constant="9" id="dFX-Ne-yHP"/>
+                            <constraint firstItem="rjw-a7-w7i" firstAttribute="leading" secondItem="RlS-8Q-3aK" secondAttribute="trailing" constant="5" id="dau-WY-U3h"/>
+                            <constraint firstItem="oFK-j7-yQQ" firstAttribute="top" secondItem="dpl-5r-c0h" secondAttribute="bottom" constant="-69" id="e2E-yv-k1Y"/>
+                            <constraint firstItem="rjw-a7-w7i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="fxa-jG-sWm"/>
+                            <constraint firstItem="NS0-Gr-6S6" firstAttribute="top" secondItem="rjw-a7-w7i" secondAttribute="bottom" constant="8" id="ggd-9o-cwO"/>
+                            <constraint firstItem="NS0-Gr-6S6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jRZ-zn-VTV"/>
+                            <constraint firstItem="O1e-tp-QfD" firstAttribute="top" secondItem="o0M-Dj-3HP" secondAttribute="bottom" constant="8" id="jVE-Vb-WzA"/>
+                            <constraint firstItem="GzD-j6-CTG" firstAttribute="leading" secondItem="O1e-tp-QfD" secondAttribute="trailing" constant="25" id="p4e-Ue-2Mv"/>
+                            <constraint firstItem="mWd-qi-cil" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="pyZ-Nm-zT1"/>
+                            <constraint firstItem="dpl-5r-c0h" firstAttribute="top" secondItem="y4d-XL-63F" secondAttribute="bottom" constant="47" id="qkw-MF-Nhe"/>
+                            <constraint firstItem="xZM-XR-iMf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rkn-c4-98z"/>
+                            <constraint firstItem="GzD-j6-CTG" firstAttribute="top" secondItem="o0M-Dj-3HP" secondAttribute="bottom" constant="8" id="uqj-ZX-cug"/>
+                            <constraint firstItem="O1e-tp-QfD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="vyW-sa-kvu">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
+                            </constraint>
+                            <constraint firstItem="y4d-XL-63F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xtn-un-x9g">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="oFK-j7-yQQ"/>
+                                <exclude reference="o0M-Dj-3HP"/>
+                                <exclude reference="O1e-tp-QfD"/>
+                                <exclude reference="xZM-XR-iMf"/>
+                                <exclude reference="GzD-j6-CTG"/>
+                                <exclude reference="rjw-a7-w7i"/>
+                                <exclude reference="NS0-Gr-6S6"/>
+                                <exclude reference="mWd-qi-cil"/>
+                                <exclude reference="vun-UR-wQV"/>
+                                <exclude reference="xO9-q8-tpo"/>
+                                <exclude reference="RlS-8Q-3aK"/>
+                                <exclude reference="fhq-Io-XNG"/>
+                                <exclude reference="kqm-pN-rgn"/>
+                                <exclude reference="00N-1Q-hoY"/>
+                                <exclude reference="eN7-FJ-T3v"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="CDY-Di-uMG"/>
+                                <exclude reference="e2E-yv-k1Y"/>
+                                <exclude reference="1WT-C8-h2g"/>
+                                <exclude reference="Evl-1a-kLt"/>
+                                <exclude reference="Wo5-6o-0b7"/>
+                                <exclude reference="9US-nW-ZKp"/>
+                                <exclude reference="bFo-c3-ksX"/>
+                                <exclude reference="ggd-9o-cwO"/>
+                                <exclude reference="jRZ-zn-VTV"/>
+                                <exclude reference="dFX-Ne-yHP"/>
+                                <exclude reference="pyZ-Nm-zT1"/>
+                                <exclude reference="SMk-Gh-iTp"/>
+                                <exclude reference="Ys8-58-mqf"/>
+                                <exclude reference="0Lb-X5-4df"/>
+                                <exclude reference="dau-WY-U3h"/>
+                                <exclude reference="FcL-N2-uCc"/>
+                                <exclude reference="KYF-JS-R7E"/>
+                                <exclude reference="jVE-Vb-WzA"/>
+                                <exclude reference="vyW-sa-kvu"/>
+                                <exclude reference="p4e-Ue-2Mv"/>
+                                <exclude reference="uqj-ZX-cug"/>
+                                <exclude reference="dBu-Fj-TWJ"/>
+                                <exclude reference="rkn-c4-98z"/>
+                                <exclude reference="Of0-uT-PjG"/>
+                                <exclude reference="URp-tV-Adi"/>
+                                <exclude reference="KIX-qB-H38"/>
+                                <exclude reference="KKE-Su-2ar"/>
+                                <exclude reference="SdM-rT-SEv"/>
+                                <exclude reference="74b-EH-ds5"/>
+                                <exclude reference="Yxu-q6-FAW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="oFK-j7-yQQ"/>
+                                <include reference="o0M-Dj-3HP"/>
+                                <include reference="O1e-tp-QfD"/>
+                                <include reference="xZM-XR-iMf"/>
+                                <include reference="GzD-j6-CTG"/>
+                                <include reference="rjw-a7-w7i"/>
+                                <include reference="NS0-Gr-6S6"/>
+                                <include reference="mWd-qi-cil"/>
+                                <include reference="vun-UR-wQV"/>
+                                <include reference="xO9-q8-tpo"/>
+                                <include reference="RlS-8Q-3aK"/>
+                                <include reference="fhq-Io-XNG"/>
+                                <include reference="kqm-pN-rgn"/>
+                                <include reference="00N-1Q-hoY"/>
+                                <include reference="eN7-FJ-T3v"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="CDY-Di-uMG"/>
+                                <include reference="e2E-yv-k1Y"/>
+                                <include reference="1WT-C8-h2g"/>
+                                <include reference="Evl-1a-kLt"/>
+                                <include reference="Wo5-6o-0b7"/>
+                                <include reference="9US-nW-ZKp"/>
+                                <include reference="bFo-c3-ksX"/>
+                                <include reference="ggd-9o-cwO"/>
+                                <include reference="jRZ-zn-VTV"/>
+                                <include reference="dFX-Ne-yHP"/>
+                                <include reference="pyZ-Nm-zT1"/>
+                                <include reference="SMk-Gh-iTp"/>
+                                <include reference="Ys8-58-mqf"/>
+                                <include reference="0Lb-X5-4df"/>
+                                <include reference="dau-WY-U3h"/>
+                                <include reference="FcL-N2-uCc"/>
+                                <include reference="KYF-JS-R7E"/>
+                                <include reference="jVE-Vb-WzA"/>
+                                <include reference="vyW-sa-kvu"/>
+                                <include reference="p4e-Ue-2Mv"/>
+                                <include reference="uqj-ZX-cug"/>
+                                <include reference="dBu-Fj-TWJ"/>
+                                <include reference="rkn-c4-98z"/>
+                                <include reference="Of0-uT-PjG"/>
+                                <include reference="URp-tV-Adi"/>
+                                <include reference="KIX-qB-H38"/>
+                                <include reference="KKE-Su-2ar"/>
+                                <include reference="SdM-rT-SEv"/>
+                                <include reference="74b-EH-ds5"/>
+                                <include reference="Yxu-q6-FAW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="NSURLSession" id="MIN-Qs-q66">
+                        <barButtonItem key="leftBarButtonItem" title="clear" id="4Gu-Ah-GQs">
+                            <connections>
+                                <action selector="tapClearLogButton:" destination="BYZ-38-t0r" id="l8y-4W-jRM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="downloadProgressView" destination="xZM-XR-iMf" id="ZUm-Sy-EDX"/>
+                        <outlet property="logTextView" destination="xO9-q8-tpo" id="NEj-Ta-RFp"/>
+                        <outlet property="uploadImageView" destination="o0M-Dj-3HP" id="iKG-5N-fDN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280.8" y="-458.32083958020991"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wS8-oG-x0S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QL2-kG-3P7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yx1-UN-KqN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yFz-LH-okf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Grx-RB-2GT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="-457"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="test.png" width="368" height="366"/>
+    </resources>
+</document>
