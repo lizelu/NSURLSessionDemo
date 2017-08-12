@@ -90,8 +90,8 @@ class ViewController: UIViewController, URLSessionDelegate, URLSessionTaskDelega
         }
         
         //3.获取Session单例，创建SessionDataTask
-        let session: Foundation.URLSession = Foundation.URLSession.shared
-        let sessionTask = session.dataTask(with: request as URLRequest) { (data, response, error) in
+        let session = URLSession.shared
+        let sessionTask = session.dataTask(with: request) { (data, response, error) in
             if error != nil {
                 self.showLog(error! as AnyObject)
                 return
@@ -168,7 +168,7 @@ class ViewController: UIViewController, URLSessionDelegate, URLSessionTaskDelega
         var request = URLRequest.init(url: url)
         request.httpMethod = "POST"
         
-        let session: Foundation.URLSession = Foundation.URLSession.init(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        let session = URLSession.init(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
         
         let uploadTask = session.uploadTask(with: request, from: parameters) { (data, response, error) in
             if error != nil{
@@ -286,7 +286,7 @@ class ViewController: UIViewController, URLSessionDelegate, URLSessionTaskDelega
         let fileUrl: URL? = URL(string: "http://www.baidu.com")
         let request = URLRequest(url: fileUrl!)
         
-        let sessionConfig: URLSessionConfiguration = URLSessionConfiguration.default
+        let sessionConfig = URLSessionConfiguration.default
         
         sessionConfig.requestCachePolicy = .returnCacheDataElseLoad
         
